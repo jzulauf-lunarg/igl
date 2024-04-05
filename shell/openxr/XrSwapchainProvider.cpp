@@ -43,6 +43,11 @@ bool XrSwapchainProvider::initialize() {
                   [&](const auto& format) { return format == colorFormat; })) {
     selectedColorFormat_ = colorFormat;
   }
+  else {
+    selectedColorFormat_ = swapchainFormats[0];
+
+  }
+
 #if defined(__APPLE__)
   selectedColorFormat_ = impl_->preferredColorFormat();
 #endif

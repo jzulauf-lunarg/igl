@@ -474,7 +474,7 @@ void VulkanContext::createInstance(const size_t numExtraExtensions, const char**
   vkInstance_ = VK_NULL_HANDLE;
   const VkResult creationErrorCode =
       (ivkCreateInstance(&vf_,
-                         VK_API_VERSION_1_1,
+                         VK_API_VERSION_1_2,
                          static_cast<uint32_t>(config_.enableValidation),
                          static_cast<uint32_t>(config_.enableGPUAssistedValidation),
                          static_cast<uint32_t>(config_.enableSynchronizationValidation),
